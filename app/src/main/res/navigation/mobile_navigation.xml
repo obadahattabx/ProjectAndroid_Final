@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="edu.birzeit.projectpart1.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_nav_home_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="edu.birzeit.projectpart1.detailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" />
+    <fragment
+        android:id="@+id/nav_postproperty"
+        android:name="edu.birzeit.projectpart1.ui.Postproperty.PostFragment"
+        android:label="@string/menu_postproperty" />
+    <fragment
+        android:id="@+id/nav_profile_agency"
+        android:name="edu.birzeit.projectpart1.ui.ProfileAgency.ProfileAgencyFragment"
+        android:label="Agency Profile"
+        tools:layout="@layout/fragment_profile_agency" />
+    <fragment
+        android:id="@+id/nav_profile_tenent"
+        android:name="edu.birzeit.projectpart1.ui.ProfileTenant.ProfileTenantFragment"
+        android:label="Tenant Profile"
+        tools:layout="@layout/fragment_profile_tenent" />
+    <fragment
+        android:id="@+id/nav_search"
+        android:name="edu.birzeit.projectpart1.ui.search.SearchFragment"
+        android:label="Property Searching"
+        tools:layout="@layout/fragment_search" />
+</navigation>
